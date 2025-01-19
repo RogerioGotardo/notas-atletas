@@ -1,11 +1,11 @@
 let atletas = [
     {
         nome: "Cesar Abascal",
-        notas: [10, 9.34, 8,42, 10, 7.88]
+        notas: [10, 9.34, 8.42, 10, 7.88]
         },
         {
             nome: "Fernando Puntel",
-            notas: [8, 10, 10,7,9.33]
+            notas: [8, 10, 10, 7, 9.33]
         },
         {
             nome: "Daiane Jelinsky",
@@ -22,7 +22,7 @@ let atletas = [
         for (let i = 0; i < atletas.length; i++) {
             let atleta = atletas[i];
             // Ordena as notas
-            let notsOrdenadas = atleta.notas.sort((a,b)=> a-b);
+            let notasOrdenadas = atleta.notas.sort((a,b) => a-b);
             // Remove a menor e a maior nota
             let notasComputadas = notasOrdenadas.slice(1, 4);
             // Calcula a média das notas restantes
@@ -32,8 +32,12 @@ let atletas = [
             }
             let media = soma / notasComputadas.length;
             // Apresenta o resultado para o usuário
-            console.log(`Alteta: ${atleta.nome}`);
+            console.log(`Atle
+                ta: ${atleta.nome}`);
             console.log(`Notas Obtidas: ${atleta.notas.join(", ")}`);
             console.log(`Média Válida: ${media.toFixed(6)}`);
         }
     }
+
+    // Chama a função com a matriz de atletas
+    calcularMedia(atletas);

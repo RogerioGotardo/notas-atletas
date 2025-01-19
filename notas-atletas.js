@@ -17,6 +17,23 @@ let atletas = [
         }
     ];
 
-    for (let i = 0; i < atletas.length; i++) {
-        let notas = atletas[i].notas;
+    // Função para calcular a média das notas
+    function calcularMedia(atletas) {
+        for (let i = 0; i < atletas.length; i++) {
+            let atleta = atletas[i];
+            // Ordena as notas
+            let notsOrdenadas = atleta.notas.sort((a,b)=> a-b);
+            // Remove a menor e a maior nota
+            let notasComputadas = notasOrdenadas.slice(1, 4);
+            // Calcula a média das notas restantes
+            let soma = 0;
+            for (let j = 0; j < notasComputadas.length; j++) {
+                soma += notasComputadas[j];  
+            }
+            let media = soma / notasComputadas.length;
+            // Apresenta o resultado para o usuário
+            console.log(`Alteta: ${atleta.nome}`);
+            console.log(`Notas Obtidas: ${atleta.notas.join(", ")}`);
+            console.log(`Média Válida: ${media.toFixed(6)}`);
+        }
     }

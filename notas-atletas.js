@@ -32,8 +32,7 @@ let atletas = [
             }
             let media = soma / notasComputadas.length;
             // Apresenta o resultado para o usuário
-            console.log(`Atle
-                ta: ${atleta.nome}`);
+            console.log(`Atleta: ${atleta.nome}`);
             console.log(`Notas Obtidas: ${atleta.notas.join(", ")}`);
             console.log(`Média Válida: ${media.toFixed(6)}`);
         }
